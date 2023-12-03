@@ -1,0 +1,175 @@
+header {
+    margin-top: 2em;
+    padding-bottom: 2em;
+    height: 8vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid hsl(220, 14%, 75%);
+}
+
+.header__left-side,
+.header__right_side {
+    flex: .5;
+}
+
+.header__left-side {
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+.menu-btn {
+    flex: .2;
+    border: none;
+    background-color: transparent;
+    display: none;
+}
+
+.logo {
+    flex: .2;
+    font-weight: 700;
+    font-size: 1.7rem;
+}
+
+.nav-container {
+    flex-direction: .6;
+    width: 100%;
+}
+
+nav {
+    height: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.close-btn {
+    display: none;
+}
+
+
+
+nav a {
+    position: sticky;
+    text-decoration: none;
+    text-transform: capitalize;
+    font-weight: 400;
+    color: hsl(220, 14%, 75%);
+}
+
+nav a:hover {
+    border-bottom: 2px solid hsl(26, 100%, 55%);
+}
+
+.header__right_side {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+
+.cart-btn {
+    position: relative;
+    border: none;
+    background-color: transparent;
+    height: fit-content;
+    margin-right: 1.5em;
+}
+
+
+
+.user-profile-avatar-container {
+    width: 40px;
+    height: 40px;
+    border-radius: 30px;
+}
+
+.cart-btn:hover,
+.user-profile-avatar-container:hover {
+    cursor: pointer;
+}
+
+.user-profile-avatar-container:hover {
+    border: 2px solid hsl(26, 100%, 55%);
+}
+
+.user-profile-avatar-container>img {
+    width: 100%;
+}
+
+.cart-items-counter {
+    padding: 1px 5px;
+    font-size: .6rem;
+    text-align: center;
+    background-color: hsl(26, 100%, 55%);
+    color: hsl(0, 0%, 100%);
+    border-radius: 30px;
+    position: absolute;
+    top: -7px;
+    right: -2px;
+}
+
+@media(max-width: 914px) {
+
+    .header__left-side {
+        flex: .7;
+
+    }
+
+    .header__right_side {
+        flex: .3;
+    }
+
+}
+
+@media(max-width: 690px) {
+
+    .menu-btn {
+        display: block;
+        margin-top: 10px;
+        margin-right: 10px;
+    }
+
+    .nav-container {
+        display: none;
+        position: absolute;
+        background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+        top: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 1;
+
+    }
+
+    .displayNav {
+        display: block;
+    }
+
+    .nav-container>nav {
+        position: relative;
+        display: block;
+        top: 0;
+        left: 0;
+        width: 300px;
+        background-color: hsl(0, 0%, 100%);
+        z-index: 1;
+        padding: 1.3em;
+    }
+
+    .nav-container>nav a {
+        display: block;
+        color: black;
+        font-weight: 700;
+        padding: 10px 0 16px;
+        font-size: 1.2rem;
+        margin-bottom: 1em;
+    }
+
+    .close-btn {
+        display: block;
+        border: none;
+        background-color: transparent;
+        margin-bottom: 4em;
+    }
+
+}

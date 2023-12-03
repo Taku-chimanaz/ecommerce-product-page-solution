@@ -1,0 +1,32 @@
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+}
+
+.item-img-container {
+    width: 40px;
+    height: 40px;
+}
+
+.item-img-container>img {
+    width: 100%;
+}
+
+.item-details {
+    text-transform: capitalize;
+    font-size: .9rem;
+    font-weight: 400;
+    color: hsl(220, 14%, 75%);
+}
+
+.item-price-quantity>span {
+    color: black;
+    font-weight: 700;
+}
+
+.remove-item-btn {
+    border: none;
+    height: fit-content;
+    background-color: transparent;
+    align-self: center;
+}
