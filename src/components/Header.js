@@ -7,7 +7,7 @@ import UserAvatar from './../images/image-avatar.png';
 import { Cart } from './Cart';
 
 
-export const Header = () => {
+export const Header = ({ cartItem, setCartItem }) => {
 
     const [displayCart, setDisplayCart] = useState(false);
     const navContainer = useRef();
@@ -64,13 +64,13 @@ export const Header = () => {
                 <button className="cart-btn" onClick={() => setDisplayCart(!displayCart)}>
                     <img src={CartIcon} alt="" />
                     <p className="cart-items-counter">
-                        1
+                        {cartItem.length}
                     </p>
                 </button>
 
                 {
                     displayCart &&
-                    <Cart />
+                    <Cart cartItem={cartItem} setCartItem={setCartItem} />
                 }
 
                 <div className="user-profile-avatar-container">

@@ -2,7 +2,8 @@ import React from 'react';
 import './../css/Cart.css'
 import { CartItem } from './CartItem';
 
-export const Cart = () => {
+export const Cart = ({ cartItem, setCartItem }) => {
+    console.log(cartItem)
     return (
         <div className="cart">
 
@@ -12,19 +13,24 @@ export const Cart = () => {
 
             <div className="cart-items-container">
 
-                <CartItem />
-
-                {/* <p className="cart-empty-text">
-                    Your cart is empty
-                </p> */}
+                {
+                    cartItem.length > 0 ?
+                        <CartItem cartItem={cartItem} setCartItem={setCartItem} /> :
+                        <p className="cart-empty-text">
+                            Your cart is empty
+                        </p>
+                }
 
             </div>
 
-            <div className="checkout-btn-container">
-                <button className="checkout-btn">
-                    checkout
-                </button>
-            </div>
+            {
+                cartItem.length > 0 &&
+                <div className="checkout-btn-container">
+                    <button className="checkout-btn">
+                        checkout
+                    </button>
+                </div>
+            }
 
 
         </div>

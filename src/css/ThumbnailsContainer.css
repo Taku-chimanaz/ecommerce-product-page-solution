@@ -1,0 +1,27 @@
+.thumbnails-container {
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.thumbnail-container {
+    width: 70px;
+    height: 70px;
+}
+
+.thumbnail-container>img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.thumbnail-container:hover {
+    cursor: pointer;
+    opacity: .5;
+}
+
+.active-thumbnail {
+    opacity: .5;
+    border: 2px solid hsl(26, 100%, 55%);
+    border-radius: 10px;
+}
