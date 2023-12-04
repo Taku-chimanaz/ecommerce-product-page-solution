@@ -7,3 +7,19 @@
   background-color: white;
   overflow: hidden;
 }
+
+@media (max-width: 1000px) {
+
+  .App {
+    flex-direction: column;
+    overflow: auto;
+  }
+}
+
+@media (max-width: 652px) {
+
+  .App {
+    width: 100vw !important;
+  }
+
+}
